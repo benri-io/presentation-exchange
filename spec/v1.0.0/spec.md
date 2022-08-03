@@ -350,7 +350,7 @@ values, and an explanation why a certain item or set of data is being requested:
 - The [[ref:Input Descriptor Object]] ****MAY**** contain a `constraints`
   property. If present, its value ****MUST**** be an object composed as follows:
     - The _constraints object_ ****MAY**** contain a `limit_disclosure`
-      property. If present, its value ****MUST**** be onf the following strings:
+      property. If present, its value ****MUST**** be one of the following strings:
 
         - `required` - This indicates that the processing entity ****MUST****
           limit submitted fields to those listed in the `fields` array (if
@@ -514,6 +514,9 @@ values, and an explanation why a certain item or set of data is being requested:
         - The _fields object_ ****MAY**** contain a `purpose` property. If
           present, its value ****MUST**** be a string that describes the purpose
           for which the field is being requested.
+        - The _fields object_ ****MAY**** contain a `name` property. If
+          present, its value ****SHOULD**** be a human-friendly name that 
+          describes what the target schema represents.
         - The _fields object_ ****MAY**** contain a `filter` property, and if
           present its value ****MUST**** be a
           [JSON Schema](https://json-schema.org/specification.html) descriptor
